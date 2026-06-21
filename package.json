@@ -3,23 +3,43 @@
   "displayName": "uwulisp_cubical",
   "description": "uwulisp cubical",
   "version": "0.0.1",
+  "publisher": "uwulisp",
   "engines": {
     "vscode": "^1.125.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "scripts": {
+    "package": "vsce package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uwulisp/uwulisp-cubical-extension"
+  },
   "contributes": {
-    "languages": [{
-      "id": "uwulisp_cubical",
-      "aliases": ["uwulisp_cubical", "uwulisp_cubical"],
-      "extensions": [".uwuc"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "uwulisp_cubical",
-      "scopeName": "source.uwuc",
-      "path": "./syntaxes/uwulisp_cubical.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "uwulisp_cubical",
+        "aliases": [
+          "uwulisp_cubical",
+          "uwulisp_cubical"
+        ],
+        "extensions": [
+          ".uwuc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "uwulisp_cubical",
+        "scopeName": "source.uwuc",
+        "path": "./syntaxes/uwulisp_cubical.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
   }
 }
