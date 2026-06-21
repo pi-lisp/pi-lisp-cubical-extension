@@ -1,0 +1,25 @@
+{
+  "name": "uwulisp-cubical",
+  "displayName": "uwulisp_cubical",
+  "description": "uwulisp cubical",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "uwulisp_cubical",
+      "aliases": ["uwulisp_cubical", "uwulisp_cubical"],
+      "extensions": [".uwuc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "uwulisp_cubical",
+      "scopeName": "source.uwuc",
+      "path": "./syntaxes/uwulisp_cubical.tmLanguage.json"
+    }]
+  }
+}
