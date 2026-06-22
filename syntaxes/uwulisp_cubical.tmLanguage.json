@@ -56,6 +56,16 @@
 					"match": "\\b(fun)\\b|(?<![\\w])λ(?![\\w])"
 				},
 				{
+					"comment": "Let expression keywords",
+					"name": "keyword.control.let.uwulisp_cubical",
+					"match": "\\b(let|in)\\b"
+				},
+				{
+					"comment": "Pattern matching keywords",
+					"name": "keyword.control.match.uwulisp_cubical",
+					"match": "\\b(match|return|with)\\b"
+				},
+				{
 					"comment": "Pi / Sigma type formers",
 					"name": "keyword.other.type-former.uwulisp_cubical",
 					"match": "\\b(Pi|Sigma)\\b|[ΠΣ]"
@@ -96,7 +106,7 @@
 		"cubical-primitives": {
 			"patterns": [
 				{
-					"comment": "Interval type",
+					"comment": "Interval type I or 𝕀",
 					"name": "support.type.interval.uwulisp_cubical",
 					"match": "\\bI\\b|𝕀"
 				}
@@ -126,9 +136,14 @@
 		"operators": {
 			"patterns": [
 				{
-					"comment": "Arrow and product",
+					"comment": "Arrow and dependent arrow =>",
 					"name": "keyword.operator.arrow.uwulisp_cubical",
-					"match": "->|=>|×|\\*"
+					"match": "->|=>"
+				},
+				{
+					"comment": "Product type * and Unicode ×",
+					"name": "keyword.operator.product.uwulisp_cubical",
+					"match": "×|\\*"
 				},
 				{
 					"comment": "Path application @",
@@ -181,7 +196,7 @@
 					"match": "\\|"
 				},
 				{
-					"comment": "Integer literal (0 and 1 as interval endpoints)",
+					"comment": "Integer literals (includes 0/1 as interval endpoints)",
 					"name": "constant.numeric.uwulisp_cubical",
 					"match": "\\b[0-9]+\\b"
 				}
@@ -191,6 +206,7 @@
 		"punctuation": {
 			"patterns": [
 				{
+					"comment": "Path binder angle brackets < > and Unicode ⟨ ⟩",
 					"name": "punctuation.definition.path-binder.begin.uwulisp_cubical",
 					"match": "<|⟨"
 				},

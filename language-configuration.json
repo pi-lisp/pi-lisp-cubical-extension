@@ -5,7 +5,9 @@
     "brackets": [
         ["{", "}"],
         ["[", "]"],
-        ["(", ")"]
+        ["(", ")"],
+        ["<", ">"],
+        ["⟨", "⟩"]
     ],
     "autoClosingPairs": [
         { "open": "{", "close": "}" },
@@ -25,15 +27,32 @@
     ],
     "wordPattern": "[a-zA-Z_][a-zA-Z0-9_'?!\\-]*",
     "indentationRules": {
-        "increaseIndentPattern": "\\{\\s*$|\\bdata\\b.*=\\s*$",
-        "decreaseIndentPattern": "^\\s*\\}"
+        "increaseIndentPattern": "\\{\\s*$|\\bdata\\b.*=\\s*$|\\blet\\b.*=\\s*$",
+        "decreaseIndentPattern": "^\\s*\\}|\\bin\\b"
     },
     "onEnterRules": [
         {
+            "comment": "Continue constructor list with a pipe after an existing pipe line",
             "beforeText": "^(\\s*)(\\|.*)$",
             "action": {
                 "indent": "none",
                 "appendText": "| "
+            }
+        },
+        {
+            "comment": "After 'match <e> return <T> with', start the first case branch",
+            "beforeText": "\\bwith\\s*$",
+            "action": {
+                "indent": "indent",
+                "appendText": "| "
+            }
+        },
+        {
+            "comment": "After 'let <x> = <e>', dedent and insert 'in '",
+            "beforeText": "^\\s*let\\s+\\S.*=\\s*$",
+            "action": {
+                "indent": "none",
+                "appendText": "in "
             }
         }
     ]
