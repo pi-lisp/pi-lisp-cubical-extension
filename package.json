@@ -2,10 +2,10 @@
   "name": "uwulisp-cubical",
   "displayName": "uwulisp_cubical",
   "description": "uwulisp cubical",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "uwulisp",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.0.0"
   },
   "categories": [
     "Programming Languages"
