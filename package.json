@@ -2,7 +2,7 @@
   "name": "uwulisp-cubical",
   "displayName": "uwulisp_cubical",
   "description": "uwulisp cubical",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "uwulisp",
   "engines": {
     "vscode": "^1.125.0"
