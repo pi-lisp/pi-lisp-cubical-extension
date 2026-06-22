@@ -3,19 +3,38 @@
 	"name": "uwulisp_cubical",
 	"scopeName": "source.uwuc",
 	"patterns": [
-		{ "include": "#comments" },
-		{ "include": "#declarations" },
-		{ "include": "#keywords" },
-		{ "include": "#cubical-primitives" },
-		{ "include": "#universe" },
-		{ "include": "#interval" },
-		{ "include": "#operators" },
-		{ "include": "#punctuation" },
-		{ "include": "#strings" },
-		{ "include": "#identifiers" }
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#declarations"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#cubical-primitives"
+		},
+		{
+			"include": "#universe"
+		},
+		{
+			"include": "#interval"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#identifiers"
+		}
 	],
 	"repository": {
-
 		"comments": {
 			"patterns": [
 				{
@@ -24,16 +43,35 @@
 				}
 			]
 		},
-
 		"declarations": {
 			"patterns": [
+				{
+					"comment": "import \"<path>\"",
+					"name": "meta.declaration.import.uwulisp_cubical",
+					"begin": "\\b(import)\\b",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.control.import.uwulisp_cubical"
+						}
+					},
+					"end": "\"[^\"]*\"",
+					"endCaptures": {
+						"0": {
+							"name": "string.quoted.double.uwulisp_cubical"
+						}
+					}
+				},
 				{
 					"comment": "def <name> : <type> = <term>",
 					"name": "meta.definition.uwulisp_cubical",
 					"match": "\\b(def)\\s+([a-zA-Z_][a-zA-Z0-9_'?!-]*)\\b",
 					"captures": {
-						"1": { "name": "keyword.declaration.def.uwulisp_cubical" },
-						"2": { "name": "entity.name.function.uwulisp_cubical" }
+						"1": {
+							"name": "keyword.declaration.def.uwulisp_cubical"
+						},
+						"2": {
+							"name": "entity.name.function.uwulisp_cubical"
+						}
 					}
 				},
 				{
@@ -41,13 +79,16 @@
 					"name": "meta.declaration.data.uwulisp_cubical",
 					"match": "\\b(data)\\s+([A-Za-z_][a-zA-Z0-9_'?!-]*)\\b",
 					"captures": {
-						"1": { "name": "keyword.declaration.data.uwulisp_cubical" },
-						"2": { "name": "entity.name.type.uwulisp_cubical" }
+						"1": {
+							"name": "keyword.declaration.data.uwulisp_cubical"
+						},
+						"2": {
+							"name": "entity.name.type.uwulisp_cubical"
+						}
 					}
 				}
 			]
 		},
-
 		"keywords": {
 			"patterns": [
 				{
@@ -102,7 +143,6 @@
 				}
 			]
 		},
-
 		"cubical-primitives": {
 			"patterns": [
 				{
@@ -112,7 +152,6 @@
 				}
 			]
 		},
-
 		"universe": {
 			"patterns": [
 				{
@@ -122,7 +161,6 @@
 				}
 			]
 		},
-
 		"interval": {
 			"patterns": [
 				{
@@ -132,7 +170,6 @@
 				}
 			]
 		},
-
 		"operators": {
 			"patterns": [
 				{
@@ -202,7 +239,6 @@
 				}
 			]
 		},
-
 		"punctuation": {
 			"patterns": [
 				{
@@ -240,7 +276,6 @@
 				}
 			]
 		},
-
 		"strings": {
 			"name": "string.quoted.double.uwulisp_cubical",
 			"begin": "\"",
@@ -252,7 +287,6 @@
 				}
 			]
 		},
-
 		"identifiers": {
 			"patterns": [
 				{
