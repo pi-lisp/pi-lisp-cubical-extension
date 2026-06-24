@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "uwulisp_cubical",
-	"scopeName": "source.uwuc",
+	"name": "pi-lisp_cubical",
+	"scopeName": "source.pic",
 	"patterns": [
 		{
 			"include": "#comments"
@@ -38,7 +38,7 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.double-dash.uwulisp_cubical",
+					"name": "comment.line.double-dash.pi-lisp_cubical",
 					"match": "--.*$"
 				}
 			]
@@ -47,43 +47,43 @@
 			"patterns": [
 				{
 					"comment": "import \"<path>\"",
-					"name": "meta.declaration.import.uwulisp_cubical",
+					"name": "meta.declaration.import.pi-lisp_cubical",
 					"begin": "\\b(import)\\b",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.control.import.uwulisp_cubical"
+							"name": "keyword.control.import.pi-lisp_cubical"
 						}
 					},
 					"end": "\"[^\"]*\"",
 					"endCaptures": {
 						"0": {
-							"name": "string.quoted.double.uwulisp_cubical"
+							"name": "string.quoted.double.pi-lisp_cubical"
 						}
 					}
 				},
 				{
 					"comment": "def <name> : <type> = <term>",
-					"name": "meta.definition.uwulisp_cubical",
+					"name": "meta.definition.pi-lisp_cubical",
 					"match": "\\b(def)\\s+([a-zA-Z_][a-zA-Z0-9_'?!-]*)\\b",
 					"captures": {
 						"1": {
-							"name": "keyword.declaration.def.uwulisp_cubical"
+							"name": "keyword.declaration.def.pi-lisp_cubical"
 						},
 						"2": {
-							"name": "entity.name.function.uwulisp_cubical"
+							"name": "entity.name.function.pi-lisp_cubical"
 						}
 					}
 				},
 				{
 					"comment": "data <Name> = | ...",
-					"name": "meta.declaration.data.uwulisp_cubical",
+					"name": "meta.declaration.data.pi-lisp_cubical",
 					"match": "\\b(data)\\s+([A-Za-z_][a-zA-Z0-9_'?!-]*)\\b",
 					"captures": {
 						"1": {
-							"name": "keyword.declaration.data.uwulisp_cubical"
+							"name": "keyword.declaration.data.pi-lisp_cubical"
 						},
 						"2": {
-							"name": "entity.name.type.uwulisp_cubical"
+							"name": "entity.name.type.pi-lisp_cubical"
 						}
 					}
 				}
@@ -93,52 +93,52 @@
 			"patterns": [
 				{
 					"comment": "Lambda / binder keywords",
-					"name": "keyword.other.lambda.uwulisp_cubical",
+					"name": "keyword.other.lambda.pi-lisp_cubical",
 					"match": "\\b(fun)\\b|(?<![\\w])λ(?![\\w])"
 				},
 				{
 					"comment": "Let expression keywords",
-					"name": "keyword.control.let.uwulisp_cubical",
+					"name": "keyword.control.let.pi-lisp_cubical",
 					"match": "\\b(let|in)\\b"
 				},
 				{
 					"comment": "Pattern matching keywords",
-					"name": "keyword.control.match.uwulisp_cubical",
+					"name": "keyword.control.match.pi-lisp_cubical",
 					"match": "\\b(match|return|with)\\b"
 				},
 				{
 					"comment": "Pi / Sigma type formers",
-					"name": "keyword.other.type-former.uwulisp_cubical",
+					"name": "keyword.other.type-former.pi-lisp_cubical",
 					"match": "\\b(Pi|Sigma)\\b|[ΠΣ]"
 				},
 				{
 					"comment": "Projection keywords",
-					"name": "keyword.other.projection.uwulisp_cubical",
+					"name": "keyword.other.projection.pi-lisp_cubical",
 					"match": "\\b(fst|snd)\\b"
 				},
 				{
 					"comment": "Elimination keyword",
-					"name": "keyword.control.elim.uwulisp_cubical",
+					"name": "keyword.control.elim.pi-lisp_cubical",
 					"match": "\\belim\\b"
 				},
 				{
 					"comment": "Transport and composition",
-					"name": "keyword.other.cubical.uwulisp_cubical",
+					"name": "keyword.other.cubical.pi-lisp_cubical",
 					"match": "\\b(transport|hcomp)\\b"
 				},
 				{
 					"comment": "Path type",
-					"name": "keyword.other.path.uwulisp_cubical",
+					"name": "keyword.other.path.pi-lisp_cubical",
 					"match": "\\bPath\\b"
 				},
 				{
 					"comment": "Univalence",
-					"name": "keyword.other.univalence.uwulisp_cubical",
+					"name": "keyword.other.univalence.pi-lisp_cubical",
 					"match": "\\b(ua|Equiv|mkEquiv|equivFwd)\\b"
 				},
 				{
 					"comment": "Glue types",
-					"name": "keyword.other.glue.uwulisp_cubical",
+					"name": "keyword.other.glue.pi-lisp_cubical",
 					"match": "\\b(Glue|glueElem|glue|unglue)\\b"
 				}
 			]
@@ -147,7 +147,7 @@
 			"patterns": [
 				{
 					"comment": "Interval type I or 𝕀",
-					"name": "support.type.interval.uwulisp_cubical",
+					"name": "support.type.interval.pi-lisp_cubical",
 					"match": "\\bI\\b|𝕀"
 				}
 			]
@@ -156,7 +156,7 @@
 			"patterns": [
 				{
 					"comment": "Universe levels: U0, U1, U2, ... and Type alias",
-					"name": "support.type.universe.uwulisp_cubical",
+					"name": "support.type.universe.pi-lisp_cubical",
 					"match": "\\b(U[0-9]+|Type)\\b"
 				}
 			]
@@ -165,7 +165,7 @@
 			"patterns": [
 				{
 					"comment": "Interval endpoints i0 / i1",
-					"name": "constant.language.interval.uwulisp_cubical",
+					"name": "constant.language.interval.pi-lisp_cubical",
 					"match": "\\b(i0|i1)\\b"
 				}
 			]
@@ -174,67 +174,67 @@
 			"patterns": [
 				{
 					"comment": "Arrow and dependent arrow =>",
-					"name": "keyword.operator.arrow.uwulisp_cubical",
+					"name": "keyword.operator.arrow.pi-lisp_cubical",
 					"match": "->|=>"
 				},
 				{
 					"comment": "Product type * and Unicode ×",
-					"name": "keyword.operator.product.uwulisp_cubical",
+					"name": "keyword.operator.product.pi-lisp_cubical",
 					"match": "×|\\*"
 				},
 				{
 					"comment": "Path application @",
-					"name": "keyword.operator.path-app.uwulisp_cubical",
+					"name": "keyword.operator.path-app.pi-lisp_cubical",
 					"match": "@"
 				},
 				{
 					"comment": "Interval meet /\\ or ∧",
-					"name": "keyword.operator.interval.meet.uwulisp_cubical",
+					"name": "keyword.operator.interval.meet.pi-lisp_cubical",
 					"match": "/\\\\|∧"
 				},
 				{
 					"comment": "Interval join \\/ or ∨",
-					"name": "keyword.operator.interval.join.uwulisp_cubical",
+					"name": "keyword.operator.interval.join.pi-lisp_cubical",
 					"match": "\\\\/|∨"
 				},
 				{
 					"comment": "Interval negation ~ or ¬",
-					"name": "keyword.operator.interval.neg.uwulisp_cubical",
+					"name": "keyword.operator.interval.neg.pi-lisp_cubical",
 					"match": "~|¬"
 				},
 				{
 					"comment": "Lambda backslash (not inside string)",
-					"name": "keyword.operator.lambda.uwulisp_cubical",
+					"name": "keyword.operator.lambda.pi-lisp_cubical",
 					"match": "\\\\(?![\"])"
 				},
 				{
 					"comment": "Type ascription colon",
-					"name": "keyword.operator.colon.uwulisp_cubical",
+					"name": "keyword.operator.colon.pi-lisp_cubical",
 					"match": "(?<!:):(?!:)"
 				},
 				{
 					"comment": "Definition equals",
-					"name": "keyword.operator.equals.uwulisp_cubical",
+					"name": "keyword.operator.equals.pi-lisp_cubical",
 					"match": "(?<!=)=(?!=)"
 				},
 				{
 					"comment": "Comma (pair constructor)",
-					"name": "keyword.operator.comma.uwulisp_cubical",
+					"name": "keyword.operator.comma.pi-lisp_cubical",
 					"match": ","
 				},
 				{
 					"comment": "Dot (binder separator)",
-					"name": "keyword.operator.dot.uwulisp_cubical",
+					"name": "keyword.operator.dot.pi-lisp_cubical",
 					"match": "\\.(?![0-9])"
 				},
 				{
 					"comment": "Pipe (constructor separator)",
-					"name": "keyword.operator.pipe.uwulisp_cubical",
+					"name": "keyword.operator.pipe.pi-lisp_cubical",
 					"match": "\\|"
 				},
 				{
 					"comment": "Integer literals (includes 0/1 as interval endpoints)",
-					"name": "constant.numeric.uwulisp_cubical",
+					"name": "constant.numeric.pi-lisp_cubical",
 					"match": "\\b[0-9]+\\b"
 				}
 			]
@@ -243,46 +243,46 @@
 			"patterns": [
 				{
 					"comment": "Path binder angle brackets < > and Unicode ⟨ ⟩",
-					"name": "punctuation.definition.path-binder.begin.uwulisp_cubical",
+					"name": "punctuation.definition.path-binder.begin.pi-lisp_cubical",
 					"match": "<|⟨"
 				},
 				{
-					"name": "punctuation.definition.path-binder.end.uwulisp_cubical",
+					"name": "punctuation.definition.path-binder.end.pi-lisp_cubical",
 					"match": ">|⟩"
 				},
 				{
-					"name": "punctuation.section.braces.begin.uwulisp_cubical",
+					"name": "punctuation.section.braces.begin.pi-lisp_cubical",
 					"match": "\\{"
 				},
 				{
-					"name": "punctuation.section.braces.end.uwulisp_cubical",
+					"name": "punctuation.section.braces.end.pi-lisp_cubical",
 					"match": "\\}"
 				},
 				{
-					"name": "punctuation.section.parens.begin.uwulisp_cubical",
+					"name": "punctuation.section.parens.begin.pi-lisp_cubical",
 					"match": "\\("
 				},
 				{
-					"name": "punctuation.section.parens.end.uwulisp_cubical",
+					"name": "punctuation.section.parens.end.pi-lisp_cubical",
 					"match": "\\)"
 				},
 				{
-					"name": "punctuation.section.brackets.begin.uwulisp_cubical",
+					"name": "punctuation.section.brackets.begin.pi-lisp_cubical",
 					"match": "\\["
 				},
 				{
-					"name": "punctuation.section.brackets.end.uwulisp_cubical",
+					"name": "punctuation.section.brackets.end.pi-lisp_cubical",
 					"match": "\\]"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.uwulisp_cubical",
+			"name": "string.quoted.double.pi-lisp_cubical",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.uwulisp_cubical",
+					"name": "constant.character.escape.pi-lisp_cubical",
 					"match": "\\\\."
 				}
 			]
@@ -291,7 +291,7 @@
 			"patterns": [
 				{
 					"comment": "Valid identifiers: start with letter or _, continue with letters/digits/_/'/?/!/-",
-					"name": "variable.other.uwulisp_cubical",
+					"name": "variable.other.pi-lisp_cubical",
 					"match": "[a-zA-Z_][a-zA-Z0-9_'?!\\-]*"
 				}
 			]

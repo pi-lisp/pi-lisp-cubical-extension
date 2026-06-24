@@ -1,6 +1,6 @@
-# uwulisp-cubical
+# pi-lisp-cubical
 
-A Visual Studio Code extension that adds language support for **uwulisp-cubical** (`.uwuc`), a dependently-typed surface language with cubical type theory extensions: path types, interval expressions, Glue types, and higher inductive types.
+A Visual Studio Code extension that adds language support for **pi-lisp-cubical** (`.pic`), a dependently-typed surface language with cubical type theory extensions: path types, interval expressions, Glue types, and higher inductive types.
 
 ---
 
@@ -49,7 +49,7 @@ All ASCII operators have accepted Unicode aliases:
 
 ## Requirements
 
-No external dependencies. The extension activates automatically for files with the `.uwuc` extension.
+No external dependencies. The extension activates automatically for files with the `.pic` extension.
 
 ---
 

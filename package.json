@@ -1,9 +1,9 @@
 {
-  "name": "uwulisp-cubical",
-  "displayName": "uwulisp_cubical",
-  "description": "uwulisp cubical",
+  "name": "pi-lisp-cubical",
+  "displayName": "pi-lisp_cubical",
+  "description": "pi-lisp cubical",
   "version": "0.0.3",
-  "publisher": "uwulisp",
+  "publisher": "pi-lisp",
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -15,27 +15,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/uwulisp/uwulisp-cubical-extension"
+    "url": "https://github.com/pi-lisp/pi-lisp-cubical-extension"
   },
   "contributes": {
     "languages": [
       {
-        "id": "uwulisp_cubical",
+        "id": "pi-lisp_cubical",
         "aliases": [
-          "uwulisp_cubical",
-          "uwulisp_cubical"
+          "pi-lisp_cubical",
+          "pi-lisp_cubical"
         ],
         "extensions": [
-          ".uwuc"
+          ".pic"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "uwulisp_cubical",
-        "scopeName": "source.uwuc",
-        "path": "./syntaxes/uwulisp_cubical.tmLanguage.json"
+        "language": "pi-lisp_cubical",
+        "scopeName": "source.pic",
+        "path": "./syntaxes/pi-lisp_cubical.tmLanguage.json"
       }
     ]
   },
